@@ -49,20 +49,20 @@ ARM Testing
 
 How to Build and Run
 
-# Clone the repository
+## Clone the repository
 `git clone https://github.com/yourusername/bootloader-project.git`
 `cd bootloader-project`
 
-# Build the bootloader for x86
+## Build the bootloader for x86
 `make x86`
 
-# Run the x86 bootloader in QEMU
+## Run the x86 bootloader in QEMU
 `qemu-system-i386 -drive format=raw,file=bootloader_x86.bin -serial stdio`
 
-# Build the bootloader for ARM
+## Build the bootloader for ARM
 `make arm`
 
-# Run the ARM bootloader in QEMU
+## Run the ARM bootloader in QEMU
 `qemu-system-arm -M versatilepb -kernel bootloader_arm.bin -serial stdio`
 
 
