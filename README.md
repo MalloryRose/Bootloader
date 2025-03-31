@@ -22,25 +22,14 @@ I undertook this project to deepen my understanding of bootloader development an
 
 x86 Bootloader
 
-Implemented in assembly with port-mapped I/O for UART communication.
-
-Operates in real mode and loads lemon_log.bin from memory.
-
-Displays message via UART in the terminal.
+- Implemented in assembly with port-mapped I/O for UART communication.
+- Operates in real mode and loads lemon_log.bin from memory.
+- Displays message via UART in the terminal.
 
 ARM Bootloader
 
-Uses memory-mapped I/O specific to the Akita platform.
-
-Configures UART registers for communication.
-
-Tested on both Akita and Raspberry Pi 2 to analyze hardware-specific differences.
-
-Build System
-
-A Makefile automates assembly, linking, and binary generation.
-
-Supports both x86 and ARM architectures.
+- Uses memory-mapped I/O specific to the Akita platform.
+- Configures UART registers for communication.
 
 ## Testing
 
@@ -48,49 +37,33 @@ Testing was performed using QEMU, allowing simulation of both x86 and ARM platfo
 
 x86 Testing
 
-Loaded bootloader and lemon_log.bin into memory.
-
-Verified correct message display via UART.
-
-Used instruction tracing (-d in_asm) to debug execution flow.
+- Loaded bootloader and lemon_log.bin into memory.
+- Verified correct message display via UART.
+- Used instruction tracing (-d in_asm) to debug execution flow.
 
 ARM Testing
 
-Ran the bootloader on the Akita platform and Raspberry Pi 2.
-
-Examined register interactions and hardware-specific behavior.
-
-Ensured proper UART communication and message output.
+- Ran the bootloader on the Akita platform and Raspberry Pi 2.
+- Examined register interactions and hardware-specific behavior.
+- Ensured proper UART communication and message output.
 
 How to Build and Run
 
 # Clone the repository
-git clone https://github.com/yourusername/bootloader-project.git
-cd bootloader-project
+`git clone https://github.com/yourusername/bootloader-project.git`
+`cd bootloader-project`
 
 # Build the bootloader for x86
-make x86
+`make x86`
 
 # Run the x86 bootloader in QEMU
-qemu-system-i386 -drive format=raw,file=bootloader_x86.bin -serial stdio
+`qemu-system-i386 -drive format=raw,file=bootloader_x86.bin -serial stdio`
 
 # Build the bootloader for ARM
-make arm
+`make arm`
 
 # Run the ARM bootloader in QEMU
-qemu-system-arm -M versatilepb -kernel bootloader_arm.bin -serial stdio
+`qemu-system-arm -M versatilepb -kernel bootloader_arm.bin -serial stdio`
 
-Future Enhancements
 
-Expand testing to more ARM platforms.
-
-Implement support for loading larger files.
-
-Optimize UART communication routines for better efficiency.
-
-License
-
-This project is open-source and available under the MIT License.
-
-Developed by Your Name
 
