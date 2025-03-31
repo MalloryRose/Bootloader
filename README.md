@@ -1,10 +1,10 @@
-Bootloader Development for x86 and ARM
+#Bootloader Development for x86 and ARM
 
-Overview
+##Overview
 
 This project focuses on developing custom bootloaders for both x86 and ARM architectures. The bootloaders are designed to load and display a message from an external binary file via the UART protocol. This required low-level assembly programming, memory-mapped I/O, and system initialization techniques.
 
-Key Features
+##Key Features
 
 Cross-Platform Support: Implemented bootloaders for both x86 and ARM architectures.
 
@@ -14,11 +14,11 @@ Automated Build System: Developed a Makefile to streamline compilation and execu
 
 QEMU Emulation: Used QEMU to test bootloader functionality without physical hardware.
 
-Why I Built This
+##Why I Built This
 
 I undertook this project to deepen my understanding of bootloader development and compare the boot process between x86 and ARM architectures. While I had prior experience with ARM, I wanted to explore x86-specific aspects such as real mode, port-mapped I/O, and legacy system boot processes. Through this project, I strengthened my low-level programming skills and enhanced my knowledge of system-level development across different hardware platforms.
 
-Implementation Details
+##Implementation Details
 
 x86 Bootloader
 
@@ -42,7 +42,7 @@ A Makefile automates assembly, linking, and binary generation.
 
 Supports both x86 and ARM architectures.
 
-Testing
+##Testing
 
 Testing was performed using QEMU, allowing simulation of both x86 and ARM platforms:
 
